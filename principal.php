@@ -27,6 +27,7 @@
             border:3px solid rgb(0,250,154);
             padding: 10px;
             border-radius: 10px;
+            display: inline-block;
         }
         a:hover{
             background-color: rgb(173,255,47);
@@ -36,11 +37,13 @@
     </style>
 </head>
 <body>
-    <h1>Bem vindo aos meus projeto<h2>
+    <h1>Bem vindo aos meus projetos<h2>
+    <a class="logout" href="login.php">SAIR</a>
         <div class="box">
-            <a href="login.php">Login</a>
-            <a href="cadastro.php">Cadastro</a>
+            <a href="login.php">teste</a>
+            <a href="Calculadora/calculadora.html">Calculadora</a>
             <a href="CURSO/index.html">Barbearia Alura</a>
         </div>
 </body>
 </html>
+

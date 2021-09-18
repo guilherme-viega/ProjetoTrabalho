@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to left, rgb(175,44,245), rgb(0,250,154));
+        }
+        div{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 30%;
+        }
+        .resultado{
+            background-color: white;
+            width: 15%;
+            margin-left: 110px;
+        }
+        #resultado{
+            color: black;
+            text-align: center;
+            font-size: 25px;
+        }
+        .link{
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-decoration: none;
+            color:white;
+            border:3px solid rgb(0,250,154);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .link:hover{
+            background-color: rgb(173,255,47);
+            cursor: pointer;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <a class="link" href="/ProjetoTrabalho/principal.php">PROJETOS</a>
+    <div>   
+        <h1>Calculadora</h1>
+        <div class="resultado">
+            <p id="resultado"></p>
+        </div>
+        <a>Primeiro numero</a><br>
+        <input id="primeiro_numero" type="number"><br>
+        <a>Segundo numero</a><br>
+        <input id="segundo_numero" type="number"><br><br>
+        <button onclick="somar()">SOMAR</button>
+        <button onclick="subtrair()">SUBTRAIR</button>
+        <button onclick="dividir()">DIVIDIR</button>
+        <button onclick="multiplicar()">MULTIPLICAR</button> 
+
+        <script>
+            var primeiro_numero = document.querySelector('#primeiro_numero');
+            var segundo_numero = document.querySelector('#segundo_numero');
+            var resultado = document.querySelector('p')
+
+            function somar(){
+                resultado.innerHTML = parseFloat(primeiro_numero.value) + parseFloat(segundo_numero.value)
+            }
+            function subtrair(){
+                resultado.innerHTML = parseFloat(primeiro_numero.value) - parseFloat(segundo_numero.value)
+            }
+            function dividir(){
+                resultado.innerHTML = (parseFloat(primeiro_numero.value) / parseFloat(segundo_numero.value)).toFixed(2)
+
+            }
+            function multiplicar(){
+                resultado.innerHTML = parseFloat(primeiro_numero.value) * parseFloat(segundo_numero.value)
+            }
+        </script>
+    </div>
+</body>
+</html>
