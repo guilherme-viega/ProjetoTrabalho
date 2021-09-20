@@ -13,7 +13,7 @@
         }
         else
         {
-            header('Location: principal.php');
+            header('Location: sobre.php');
         }
     }
     else

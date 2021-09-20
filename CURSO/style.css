@@ -56,8 +56,9 @@ nav a:hover {
 	font-weight: bold;
 	border-color: red;
 
-
 }
+
+
 .produtos li:active{
 	border-color: green;
 }

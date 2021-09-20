@@ -12,12 +12,13 @@
         $verifica_email = mysqli_query($conexao, "SELECT * FROM cadastro WHERE email = '{$email}'");
         if(mysqli_num_rows($verifica_email) > 0) {
             echo "<script>alert('E-mail já cadastrado, por favor tente novamente.')</script>'";
+            echo mysqli_error($conexao);
         }
         else{
             $result = mysqli_query($conexao, "INSERT INTO cadastro(nome,email,senha,data_nascimento,cidade,estado) 
             VALUES ('$nome','$email','$senha','$data_nascimento','$cidade','$estado')");
-            if(mysqli_num_rows($result) < 1){
-                echo "<script>alert('Usuário cadastrado com sucesso. Você sera redirecionado!'); location= './home.php';</script>";
+            if(mysqli_num_rows($verifica_email) < 1){
+                echo "<script>alert('Usuário cadastrado com sucesso. Você sera redirecionado!'); location= './login.php';</script>";
             }    
         }
        

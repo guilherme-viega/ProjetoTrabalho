@@ -23,8 +23,9 @@
         }
         .resultado{
             background-color: white;
-            width: 15%;
             margin-left: 110px;
+            min-width: 15px;
+            width: auto;
         }
         #resultado{
             color: black;
@@ -51,7 +52,7 @@
     </style>
 </head>
 <body>
-    <a class="link" href="/ProjetoTrabalho/principal.php">PROJETOS</a>
+    <a class="link" href="/projeto/projetos.html">PROJETOS</a>
     <div>   
         <h1>Calculadora</h1>
         <div class="resultado">
@@ -70,6 +71,7 @@
             var primeiro_numero = document.querySelector('#primeiro_numero');
             var segundo_numero = document.querySelector('#segundo_numero');
             var resultado = document.querySelector('p')
+
 
             function somar(){
                 resultado.innerHTML = parseFloat(primeiro_numero.value) + parseFloat(segundo_numero.value)
