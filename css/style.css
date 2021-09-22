@@ -120,12 +120,18 @@ section.descricao p{
 	border-radius: 10px;
 	}
 
+
 .produtos li:hover {
 	color: blueviolet;
 	font-weight: bold;
 	border-color: blueviolet;
 }
 
+#breve:hover{
+	color: red;
+	font-weight: bold;
+	border-color: red;
+}
 
 .produtos li:active{
 	border-color: green;
